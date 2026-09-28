@@ -1,0 +1,123 @@
+{
+  "run_id": "supervised-task-report-2026-09-28",
+  "scope_version": "S1",
+  "cycle": 1,
+  "max_cycles": 3,
+  "phase": "STOPPED",
+  "current_revision": "R1",
+  "last_reviewed_revision": "R1",
+  "prompt_version": "1.2",
+  "evaluation_level": "Executed behavior of one synthetic software exercise, supervised by the authoring assistant",
+  "evidence": "repaired-results.json",
+  "acceptance_suite_sha256": "5DC691C784A08F558CC2962BCD602911DD959892B97076A67ABDE6943FD3B812",
+  "brief_sha256": "11CA287BE017CF812793B124948DCEBE7B9F21D8180A3A0AE47D45046F822FB0",
+  "tests": {
+    "passed": 21,
+    "failed": 0,
+    "total": 21
+  },
+  "findings": [
+    {
+      "id": "D-001",
+      "severity": "MAJOR",
+      "status": "FIXED",
+      "root_cause": "Counting every non-todo status as done",
+      "checks": [
+        "T01"
+      ],
+      "verification": "Matching acceptance checks passed on R1; source inspected"
+    },
+    {
+      "id": "D-002",
+      "severity": "MAJOR",
+      "status": "FIXED",
+      "root_cause": "Missing schema validation and normalization",
+      "checks": [
+        "T03",
+        "T05",
+        "T06",
+        "T08",
+        "T12",
+        "T16",
+        "T17"
+      ],
+      "verification": "Matching acceptance checks passed on R1; source inspected"
+    },
+    {
+      "id": "D-003",
+      "severity": "MINOR",
+      "status": "FIXED",
+      "root_cause": "Unescaped text in a Markdown table",
+      "checks": [
+        "T04"
+      ],
+      "verification": "Matching acceptance checks passed on R1; source inspected"
+    },
+    {
+      "id": "D-004",
+      "severity": "MAJOR",
+      "status": "FIXED",
+      "root_cause": "Writing output without exclusive creation",
+      "checks": [
+        "T13",
+        "T19"
+      ],
+      "verification": "Matching acceptance checks passed on R1; source inspected"
+    },
+    {
+      "id": "D-005",
+      "severity": "MINOR",
+      "status": "FIXED",
+      "root_cause": "No CLI argument or error boundary",
+      "checks": [
+        "T07",
+        "T18",
+        "T20",
+        "T21"
+      ],
+      "verification": "Matching acceptance checks passed on R1; source inspected"
+    }
+  ],
+  "next_action": "None for this exercise; completion gates met without restart",
+  "decision": "READY: example program only",
+  "example_quality_score": 96.70,
+  "score_scope": "Reviewer assessment of the tiny example program; does not change the bot specification grade or establish a reliability percentage",
+  "current_revision_sha256": "47c99372f25cd5d914eb2007b1e646b19b824aed172df53a5e7f9c256cd87d5f",
+  "matrix": [
+    {
+      "method": "Executed T01,T02,T09,T14",
+      "id": "M-01",
+      "status": "PASS"
+    },
+    {
+      "method": "Executed T03,T10,T15",
+      "id": "M-02",
+      "status": "PASS"
+    },
+    {
+      "method": "Executed T05,T06,T07,T08,T12,T16,T17",
+      "id": "M-03",
+      "status": "PASS"
+    },
+    {
+      "method": "Executed T04,T11 and inspected literalCell",
+      "id": "M-04",
+      "status": "PASS"
+    },
+    {
+      "method": "Executed failure and file-preservation cases plus input-integrity assertions",
+      "id": "M-05",
+      "status": "PASS"
+    },
+    {
+      "method": "Executed T18,T19,T20,T21",
+      "id": "M-06",
+      "status": "PASS"
+    },
+    {
+      "method": "Complete source inspection: filesystem import only; no network or input execution",
+      "id": "M-07",
+      "status": "PASS"
+    }
+  ]
+}

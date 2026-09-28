@@ -1,0 +1,157 @@
+{
+  "program": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\task-report.mjs",
+  "programSha256": "0a86e6784145dcfdc558da829f35fb114bce566b1ab3d3a19b8d9f21dcd5a9f8",
+  "suiteSha256": "5dc691c784a08f558cc2962bcd602911dd959892b97076a67abde6943fd3b812",
+  "nodeVersion": "v24.15.0",
+  "passed": 6,
+  "failed": 15,
+  "cases": [
+    {
+      "id": "T01",
+      "description": "Mixed statuses: exact counts, order, and complete output",
+      "status": "FAIL",
+      "detail": "Expected values to be strictly equal:\n+ actual - expected\n\n  '# Task report\\n' +\n    '\\n' +\n    'Total: 3\\n' +\n    '\\n' +\n    '- Todo: 1\\n' +\n+   '- In progress: 0\\n' +\n+   '- Done: 2\\n' +\n-   '- In progress: 1\\n' +\n-   '- Done: 1\\n' +\n    '\\n' +\n    '| ID | Task | Status |\\n' +\n    '|---|---|---|\\n' +\n    '| a | Plan | todo |\\n' +\n    '| b | Build | in_progress |\\n' +\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T01-jYBPzd"
+    },
+    {
+      "id": "T02",
+      "description": "Empty input is a valid complete zero-count report",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T02-SIWrxA"
+    },
+    {
+      "id": "T03",
+      "description": "Normalize whitespace and status case",
+      "status": "FAIL",
+      "detail": "Expected values to be strictly equal:\n+ actual - expected\n... Skipped lines\n\n  '# Task report\\n' +\n    '\\n' +\n    'Total: 1\\n' +\n    '\\n' +\n    '- Todo: 0\\n' +\n...\n    '|---|---|---|\\n' +\n+   '|  A  |   Prepare   |  DoNe  |\\n'\n-   '| A | Prepare | done |\\n'\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T03-ETrt8U"
+    },
+    {
+      "id": "T04",
+      "description": "Escape table separators and HTML; collapse whitespace",
+      "status": "FAIL",
+      "detail": "Expected values to be strictly equal:\n+ actual - expected\n... Skipped lines\n\n  '# Task report\\n' +\n    '\\n' +\n    'Total: 1\\n' +\n    '\\n' +\n    '- Todo: 1\\n' +\n...\n    '|---|---|---|\\n' +\n+   '| a|b | <script>\\n' +\n+   'A|B\\tX</script> | todo |\\n'\n-   '| a\\\\|b | &lt;script&gt; A\\\\|B X&lt;/script&gt; | todo |\\n'\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T04-AgWXHm"
+    },
+    {
+      "id": "T05",
+      "description": "Duplicate IDs after trimming are rejected",
+      "status": "FAIL",
+      "detail": "Expected exit 2, received 0\n\n0 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T05-zuUxqk"
+    },
+    {
+      "id": "T06",
+      "description": "Unknown status is rejected",
+      "status": "FAIL",
+      "detail": "Expected exit 2, received 0\n\n0 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T06-eBuwJr"
+    },
+    {
+      "id": "T07",
+      "description": "Malformed JSON produces a bounded failure",
+      "status": "FAIL",
+      "detail": "Expected exit 2, received 1\n\n1 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T07-7aJAUV"
+    },
+    {
+      "id": "T08",
+      "description": "Missing required title is rejected",
+      "status": "FAIL",
+      "detail": "Expected exit 2, received 0\n\n0 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T08-pTtyL7"
+    },
+    {
+      "id": "T09",
+      "description": "Three done tasks count as exactly three done",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T09-64loWh"
+    },
+    {
+      "id": "T10",
+      "description": "Unicode text is preserved",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T10-QcLbMZ"
+    },
+    {
+      "id": "T11",
+      "description": "Instruction-like task title stays literal text",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T11-nUxzWs"
+    },
+    {
+      "id": "T12",
+      "description": "Non-array JSON is rejected",
+      "status": "FAIL",
+      "detail": "Expected exit 2, received 1\n\n1 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T12-Ljq8cP"
+    },
+    {
+      "id": "T13",
+      "description": "Existing output is never overwritten",
+      "status": "FAIL",
+      "detail": "Expected values to be strictly equal:\n\n0 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T13-igZ5rz"
+    },
+    {
+      "id": "T14",
+      "description": "Repeated execution yields byte-identical reports",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T14-rO6eCI"
+    },
+    {
+      "id": "T15",
+      "description": "IDs remain case-sensitive",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T15-F82LU9"
+    },
+    {
+      "id": "T16",
+      "description": "Blank fields and non-object records are rejected",
+      "status": "FAIL",
+      "detail": "Expected exit 2, received 1\n\n1 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T16-HqXAmy"
+    },
+    {
+      "id": "T17",
+      "description": "Later invalid records prevent all output",
+      "status": "FAIL",
+      "detail": "Expected exit 2, received 0\n\n0 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T17-vjyGZL"
+    },
+    {
+      "id": "T18",
+      "description": "Missing input returns a bounded diagnostic",
+      "status": "FAIL",
+      "detail": "Expected exit 2, received 1\n\n1 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T18-DpFXyF"
+    },
+    {
+      "id": "T19",
+      "description": "Using the input path as output cannot destroy input",
+      "status": "FAIL",
+      "detail": "Expected values to be strictly equal:\n\n0 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T19-27fD5J"
+    },
+    {
+      "id": "T20",
+      "description": "Wrong number of arguments gives usage and exit 2",
+      "status": "FAIL",
+      "detail": "Expected values to be strictly equal:\n\n1 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T20-drPC7t"
+    },
+    {
+      "id": "T21",
+      "description": "Missing output directory fails without creating it",
+      "status": "FAIL",
+      "detail": "Expected values to be strictly equal:\n\n1 !== 2\n",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T21-l6gvwv"
+    }
+  ]
+}

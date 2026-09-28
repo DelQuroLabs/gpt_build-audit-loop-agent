@@ -1,0 +1,157 @@
+{
+  "program": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\task-report.mjs",
+  "programSha256": "47c99372f25cd5d914eb2007b1e646b19b824aed172df53a5e7f9c256cd87d5f",
+  "suiteSha256": "5dc691c784a08f558cc2962bcd602911dd959892b97076a67abde6943fd3b812",
+  "nodeVersion": "v24.15.0",
+  "passed": 21,
+  "failed": 0,
+  "cases": [
+    {
+      "id": "T01",
+      "description": "Mixed statuses: exact counts, order, and complete output",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T01-SwarZ0"
+    },
+    {
+      "id": "T02",
+      "description": "Empty input is a valid complete zero-count report",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T02-r4UOVH"
+    },
+    {
+      "id": "T03",
+      "description": "Normalize whitespace and status case",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T03-vevZpU"
+    },
+    {
+      "id": "T04",
+      "description": "Escape table separators and HTML; collapse whitespace",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T04-caBDKu"
+    },
+    {
+      "id": "T05",
+      "description": "Duplicate IDs after trimming are rejected",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T05-seC37e"
+    },
+    {
+      "id": "T06",
+      "description": "Unknown status is rejected",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T06-oDmhTe"
+    },
+    {
+      "id": "T07",
+      "description": "Malformed JSON produces a bounded failure",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T07-nNEKgf"
+    },
+    {
+      "id": "T08",
+      "description": "Missing required title is rejected",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T08-E0XyH2"
+    },
+    {
+      "id": "T09",
+      "description": "Three done tasks count as exactly three done",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T09-DRLODq"
+    },
+    {
+      "id": "T10",
+      "description": "Unicode text is preserved",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T10-pi7k59"
+    },
+    {
+      "id": "T11",
+      "description": "Instruction-like task title stays literal text",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T11-Zvcjyi"
+    },
+    {
+      "id": "T12",
+      "description": "Non-array JSON is rejected",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T12-uEm6NA"
+    },
+    {
+      "id": "T13",
+      "description": "Existing output is never overwritten",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T13-RYoyEa"
+    },
+    {
+      "id": "T14",
+      "description": "Repeated execution yields byte-identical reports",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T14-cUAy2E"
+    },
+    {
+      "id": "T15",
+      "description": "IDs remain case-sensitive",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T15-tyqJhc"
+    },
+    {
+      "id": "T16",
+      "description": "Blank fields and non-object records are rejected",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T16-3bCUYV"
+    },
+    {
+      "id": "T17",
+      "description": "Later invalid records prevent all output",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T17-gssi6z"
+    },
+    {
+      "id": "T18",
+      "description": "Missing input returns a bounded diagnostic",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T18-7rjf0l"
+    },
+    {
+      "id": "T19",
+      "description": "Using the input path as output cannot destroy input",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T19-sUjTV0"
+    },
+    {
+      "id": "T20",
+      "description": "Wrong number of arguments gives usage and exit 2",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T20-NcchIW"
+    },
+    {
+      "id": "T21",
+      "description": "Missing output directory fails without creating it",
+      "status": "PASS",
+      "detail": "All assertions satisfied",
+      "directory": "C:\\Users\\plane\\Documents\\Codex\\2026-09-26\\wi\\work\\loop-validation\\cases\\T21-o65UNP"
+    }
+  ]
+}
